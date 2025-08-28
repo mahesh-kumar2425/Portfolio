@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f81f602dac.js" crossorigin="anonymous"></script>
+    <!-- =======unicons======= -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Mahesh Protfolio website</title>
+</head>
+<body>
+    <!-- =======header========== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">MAHESH KUMAR</a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list grid">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link active-link">
+                            <i class="uil uil-estate nav_icons"></i>HOME
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="about.html" class="nav_link">
+                            <i class="uil uil-user nav_icons"></i>ABOUT
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav_link">
+                            <i class="uil uil-envelope nav_icons"></i>CONTACT ME
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav_close" id="nav-close"></i>
+            </div>
+
+            <div class="nav_btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+        <h2 class="section_title">About Me</h2>
+        <span class="section_subtitle">My Introduction</span>
+        <div class="about-1">
+            <div class="about_container container grid">
+                <img src="images/about_img.jpeg" alt="Yashaswini Jawalkar" class="about_img">
+            </div>
+            <div class="about_data">
+                <p class="about_description">I am a First year MCA student with a passion for technology and a
+                    desire to constantly improve my skills. I have always been fascinated by the endless
+                    possibilities that technology offers and I am determined to be at the forefront of innovation. I
+                    believe that hands-on experience is the best way to learn, and I am always looking for new
+                    projects and opportunities to challenge myself and push the boundaries of what I am capable
+                    of.<br>I am excited to continue my journey in technology and am eager to take on new challenges.
+                    I am always open to new ideas and opportunities and am confident that I have the skills and
+                    determination to succeed. If you have any ideas or projects that you think I would be a good fit
+                    for, please do not hesitate to contact me</p>
+            </div>
+        </div>
+
+        <div class="about_info">
+            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('achievements')">certifications</p>
+        </div>
+        <div class="tab-content active-tab" id="education">
+            <ul>
+                <li>
+                    <div class="for_logo">
+                        <div><span>Graduation(2021-2024)</span><br>
+                            <div>B.Sc in Information Technology</div>A.N.College, Patna </div>
+                    </div>
+                </li>
+                <li><span>Intermediate (2019-2021)</span><br>
+                    <div>PCM</div>Jawahar Navodaya Vidyalaya Bishanpur, Begusarai
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content" id="achievements">
+            <ul>
+                <li>
+                    <div class="for_logo"><img
+                            src="images/imfo.png">
+                        <div><span>Basic C#</span><br>Imfosys springboard<br><a href="image/c#.pdf"
+                                target="_blank" class="btn"> Show Credentials <i
+                                    class="fa-solid fa-up-right-from-square"></i></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="for_logo"><img
+                            src="images/imfo.png">
+                        <div><span>React</span><br>Imfosys springboard<br><a href="image/react.pdf"
+                                target="_blank" class="btn"> Show Credentials <i
+                                    class="fa-solid fa-up-right-from-square"></i></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="for_logo"><img
+                            src="https://1000logos.net/wp-content/uploads/2016/11/Cisco-logo.png">
+                        <div><span>Python programming</span><br>From Softpro India<br><a
+                                href="certificates/c++.pdf" target="_blank" class="btn"> Show Credentials <i
+                                    class="fa-solid fa-up-right-from-square"></i></a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+        <!--==================== MAIN JS ====================-->
+    <script src="main.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwg_vxo_dbD66Bn87GQiDtHR1QR1jNT9RdPCbwbs8NmUCYrXrbaMUAM3Pz6y8k6dzIBnw/exec'
+    </script>
+    
+</body>
+</html>

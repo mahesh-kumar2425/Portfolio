@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f81f602dac.js" crossorigin="anonymous"></script>
+    <!-- =======unicons======= -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Mahesh kumar Protfolio website</title>
+</head>
+<body>
+    <!-- =======header========== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">MAHESH KUMAR</a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list grid">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link active-link">
+                            <i class="uil uil-estate nav_icons"></i>HOME
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="about.html" class="nav_link">
+                            <i class="uil uil-user nav_icons"></i>ABOUT
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav_link">
+                            <i class="uil uil-envelope nav_icons"></i>CONTACT ME
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav_close" id="nav-close"></i>
+            </div>
+
+            <div class="nav_btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <!--==================== CONTACT ME ====================-->
+     <section class="contact section" id="contact">
+        <h2 class="section_title">Contact Me</h2>
+        <span class="section_subtitle">Get in Touch</span>
+        <div class="contact_container container grid">
+            <div>
+                <div class="contact_information">
+                    <i class="uil uil-phone contact_icon"></i>
+                    <div>
+                        <h3 class="contact_title">Call Me</h3>
+                        <span class="contact_subtitle">+91 9142122216</span>
+                    </div>
+                </div>
+                <div class="contact_information">
+                    <a href="https://mail.google.com/mail/u/0/#inbox"
+                        target="_blank"><i class="uil uil-envelope-alt contact_icon"></i></a>
+                    <div>
+                        <h3 class="contact_title">Mail Me</h3>
+                        <span class="contact_subtitle">Panditmk2021@gmail.com</span>
+                    </div>
+                </div>
+                <div class="contact_information">
+                    <a href="https://www.google.com/maps/place//@25.6983374,85.7840321,15.65z/data=!4m9!1m8!3m7!1s0x39ed8f351e969215:0xb50f310885791975!2sPach+Paika,+Bihar+848114!3b1!8m2!3d25.6999253!4d85.7897284!16s%2Fg%2F12hnwznfm?authuser=0&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"><i class="uil uil-map-marker contact_icon"></i></a>
+                    <div>
+                        <h3 class="contact_title">Location</h3>
+                        <span class="contact_subtitle">Pachpaika, Bihar - India</span>
+                    </div>
+                </div>
+            </div>
+
+            <form name="submit-to-google-sheet" action="" class="contact_form grid">
+                <div class="contact_inputs grid">
+                    <div class="contact_content">
+                        <label for="" class="contact_label">Name</label>
+                        <input type="text" name="Name" class="contact_input" required>
+                    </div>
+                    <div class="contact_content">
+                        <label for="" class="contact_label">Email</label>
+                        <input type="email" name="Email" class="contact_input" required>
+                    </div>
+                    <div class="contact_content">
+                        <label for="" class="contact_label">message</label>
+                        <textarea name="Message" id="" cols="0" rows="6" class="contact_input" required></textarea>
+                    </div>
+                    <div>
+                        <span id="msg"></span>
+                        <button type="submit" class="button--flex button">
+                            Send message
+                            <i class="uil uil-message button_icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+     <!--==================== MAIN JS ====================-->
+
+     <script src="main.js"></script>
+
+     <script>
+         const scriptURL = 'https://docs.google.com/spreadsheets/d/11L_4apG8RGP3QhvXuZIsQCwHv8tcjMLcRBoplBCp4VQ/edit?gid=0#gid=0'         
+         const form = document.forms['submit-to-google-sheet']
+         const msg = document.getElementById('msg')
+         form.addEventListener('submit', e => {
+             e.preventDefault()
+             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                 .then(response => {
+                     msg.innerHTML = "Your Message Sent Successfully"
+                     setTimeout(function () {
+                         msg.innerHTML = ""
+                     }, 2000)
+                     form.reset()
+                 })
+                 .catch(error => console.error('Error!', error.message))
+         })
+     </script>
+</body>
+</html>
